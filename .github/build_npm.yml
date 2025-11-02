@@ -3,9 +3,9 @@ name: npm-build
 on:
   workflow_dispatch:
   push:
-    branches: [ "dev" ]
+    branches: [ "diy" ]
   pull_request:
-    branches: [ "dev" ]
+    branches: [ "diy" ]
 
   
 jobs:
