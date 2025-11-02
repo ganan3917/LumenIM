@@ -1,4 +1,4 @@
-name: npm-build
+name: pnpm_build
 
 on:
   workflow_dispatch:
