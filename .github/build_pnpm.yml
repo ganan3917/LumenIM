@@ -1,7 +1,6 @@
 name: pnpm_build
 
 on:
-  workflow_dispatch:
   push:
     branches: [ "diy" ]
   pull_request:
