@@ -1,0 +1,56 @@
+name: npm-build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache-dependency-path: 'pnpm-lock.yaml'
+ 
+      - name: 安装pnpm
+        run: |
+          npm install -g pnpm@8.15.0
+          echo "$(npm config get prefix)/bin" >> $GITHUB_PATH
+ 
+      - name: 检查版本
+        run: pnpm --version
+
+      - name: 安装依赖
+        run: pnpm install
+
+      - name: 编译项目
+        run: pnpm run build
+
+      - name: 打包目录
+        run: |
+          tar -czf LumenIM_dist.tar.gz -C /home/runner/work/LumenIM/LumenIM/dist/ .
+
+      - name: 上传Release
+        uses: ncipollo/release-action@v1
+        with:
+         tag: LumenIM
+         name: LumenIM
+         artifacts: LumenIM_dist.tar.gz
+         allowUpdates: true
+         replaceArtifacts: true
+         draft: false
+         prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
