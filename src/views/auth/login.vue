@@ -63,17 +63,17 @@ const onValidate = (e: Event) => {
   formRef.value.validate((errors: any) => !errors && onLogin())
 }
 
-const onClickAccount = (type: number) => {
-  if (type == 1) {
-    model.username = '13800000001'
-    model.password = 'admin123'
-  } else {
-    model.username = '13800000002'
-    model.password = 'admin123'
-  }
-
-  onLogin()
-}
+// const onClickAccount = (type: number) => {
+//  if (type == 1) {
+//    model.username = '13800000001'
+//    model.password = 'admin123'
+//  } else {
+//    model.username = '13800000002'
+//    model.password = 'admin123'
+//  }
+//
+//  onLogin()
+// }
 
 const toOauth = async (oauth_type: 'github' | 'gitee') => {
   sync(async () => {
@@ -86,7 +86,7 @@ const toOauth = async (oauth_type: 'github' | 'gitee') => {
 
 <template>
   <section class="el-container is-vertical login-box login">
-    <header class="el-header box-header">快捷登录</header>
+    <header class="el-header box-header">用户登录</header>
 
     <main class="el-main" style="padding: 3px">
       <n-form ref="formRef" size="large" :model="model" :rules="rules">
@@ -110,8 +110,10 @@ const toOauth = async (oauth_type: 'github' | 'gitee') => {
         </n-form-item>
 
         <n-space>
-          <n-button text color="#409eff" @click="onClickAccount(1)"> 预览账号1 </n-button>
-          <n-button text color="#409eff" @click="onClickAccount(2)"> 预览账号2 </n-button>
+          <n-button text color="#409eff"> 手机号即帐号，可任意编写，但请您牢记。 </n-button>
+          <n-button text color="#409eff"> 如果忘记了，直接重新注册，无需再找回。 </n-button>
+          <n-button text color="#409eff"> 手机号勿用个人的、真实的号码。 </n-button>
+          <n-button text color="#409eff"> 如果使用真实的，请联系管理员删除。 </n-button>
         </n-space>
 
         <n-button
@@ -128,7 +130,7 @@ const toOauth = async (oauth_type: 'github' | 'gitee') => {
       </n-form>
 
       <div class="helper">
-        <n-button text color="#409eff" @click="router.push('/auth/forget')"> 找回密码 </n-button>
+      //  <n-button text color="#409eff" @click="router.push('/auth/forget')"> 找回密码 </n-button>
         <n-button text color="#409eff" @click="router.push('/auth/register')">
           还没有账号？立即注册
         </n-button>
