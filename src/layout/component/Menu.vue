@@ -26,11 +26,11 @@ const menus = reactive([
     title: '通讯录',
     hotspot: computed(() => userStore.isContactApply || userStore.isGroupApply)
   },
-  {
-    link: '/note',
-    icon: markRaw(NotebookOne),
-    title: '笔记'
-  },
+//  {
+//    link: '/note',
+//   icon: markRaw(NotebookOne),
+//    title: '笔记'
+//  },
   {
     link: '/settings',
     icon: markRaw(SettingTwo),
@@ -108,11 +108,11 @@ const isActive = (menu) => {
     </main>
 
     <footer class="menu-footer">
-      <div>
-        <a class="pointer" href="https://github.com/gzydong/LumenIM" target="_blank">
-          <github-one theme="outline" size="22" :fill="color" :strokeWidth="2" />
-        </a>
-      </div>
+   //  <div>
+   //     <a class="pointer" href="https://github.com/gzydong/LumenIM" target="_blank">
+   //       <github-one theme="outline" size="22" :fill="color" :strokeWidth="2" />
+   //     </a>
+   //   </div>
       <div @click="onLogout" class="pointer">退出</div>
     </footer>
   </section>
