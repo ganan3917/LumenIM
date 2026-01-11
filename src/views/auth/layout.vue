@@ -11,6 +11,8 @@ import { isElectronMode } from '@/utils/electron'
 
   <div class="copyright">
     <span>©2020 - 2026 Easy Room</span>
+    <span>管理账号：15511112222</span>
+    <span>管理邮箱：diwangkeji#outlook.com</span>
   </div>
 
   <div class="fly-box">
