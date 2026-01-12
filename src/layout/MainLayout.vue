@@ -6,9 +6,6 @@ import Sponsor from './component/Sponsor.vue'
 
 <template>
   <section class="el-container is-vertical im-container">
-    <!-- <header class="el-header border-bottom flex" style="height: 50px; align-items: center">
-      <div style="font-size: 18px">LumenIM</div>
-    </header> -->
     <main class="el-main">
       <section class="el-container">
         <aside :class="{ 'pd-t20': isElectronMode() }" class="el-aside app-drag border-right">
