@@ -3,15 +3,15 @@ import { isElectronMode } from '@/utils/electron'
 </script>
 
 <template>
-  <div id="logo-name" v-if="!isElectronMode()">聊天室</div>
+  <div id="logo-name" v-if="!isElectronMode()">Chat Room</div>
 
   <section class="section">
     <router-view />
   </section>
 
   <div class="copyright">
-    <span>©2020 - 2026 帝王科技 </span>
-    <span>管理账号：15511112222</span>
+    <span>©2022 - 2026 帝王科技</span> <br/>
+    <span>管理账号：15511112222</span> <br/>
     <span>管理邮箱：diwangkeji#outlook.com</span>
   </div>
 
