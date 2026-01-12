@@ -10,7 +10,6 @@ import { isElectronMode } from '@/utils/electron'
   </section>
 
   <div class="copyright">
-    <span>©2022 - 2026 </span> <br/>
     <span>管理账号：15511112222</span> <br/>
     <span>管理邮箱：diwangkeji#outlook.com</span> <br/>
     <span><a href="http://service.queryip.top/guifan.html" target="_blank">社区规范</a></span>
