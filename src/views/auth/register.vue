@@ -164,7 +164,6 @@ const onSendSms = async () => {
       </n-form>
 
       <div class="helper">
-       // <n-button text color="#409eff" @click="router.push('/auth/forget')"> 找回密码 </n-button>
         <n-button text color="#409eff" @click="router.push('/auth/login')">
           已有账号，立即登录?
         </n-button>
