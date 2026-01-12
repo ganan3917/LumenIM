@@ -109,12 +109,6 @@ const toOauth = async (oauth_type: 'github' | 'gitee') => {
           />
         </n-form-item>
 
-        <n-space>
-          <n-button text color="#666666"> 手机即账号，任意编写，勿用真实号码。 </n-button>
-          <n-button text color="#666666"> 如果忘记了，直接重新注册，无需再去找回。 </n-button>
-          <n-button text color="#666666"> 如果不慎使用真实的，可联系管理员删除。 </n-button>
-        </n-space>
-
         <n-button
           type="primary"
           size="large"
