@@ -10,7 +10,7 @@ import { isElectronMode } from '@/utils/electron'
   </section>
 
   <div class="copyright">
-    <span>©2022 - 2026 帝王科技</span> <br/>
+    <span>©2022 - 2026 </span> <br/>
     <span>管理账号：15511112222</span> <br/>
     <span>管理邮箱：diwangkeji#outlook.com</span>
   </div>
